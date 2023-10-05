@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-04 16:39+0300\n"
+"POT-Creation-Date: 2023-10-05 22:23+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,10 +18,110 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: backend/settings.py:114
+#: backend/settings.py:115
 msgid "English"
 msgstr "English"
 
-#: backend/settings.py:115
+#: backend/settings.py:116
 msgid "Hebrew"
 msgstr "Hebrew"
+
+#: ballot/managers.py:15
+msgid "The Email must be set"
+msgstr ""
+
+#: ballot/managers.py:31
+msgid "Superuser must have is_staff=True."
+msgstr ""
+
+#: ballot/managers.py:33
+msgid "Superuser must have is_superuser=True."
+msgstr ""
+
+#: ballot/models.py:10
+msgid "email address"
+msgstr ""
+
+#: ballot/models.py:11 ballot/models.py:45
+msgid "title"
+msgstr ""
+
+#: ballot/models.py:12
+msgid "avatar"
+msgstr ""
+
+#: ballot/models.py:30
+msgid "member"
+msgstr ""
+
+#: ballot/models.py:31
+msgid "members"
+msgstr ""
+
+#: ballot/models.py:39
+msgid "open"
+msgstr ""
+
+#: ballot/models.py:40
+msgid "closed"
+msgstr ""
+
+#: ballot/models.py:41
+msgid "accepted"
+msgstr ""
+
+#: ballot/models.py:42
+msgid "handled"
+msgstr ""
+
+#: ballot/models.py:44
+msgid "created_by"
+msgstr ""
+
+#: ballot/models.py:46
+msgid "description"
+msgstr ""
+
+#: ballot/models.py:47
+msgid "status"
+msgstr ""
+
+#: ballot/models.py:48
+msgid "created_at"
+msgstr ""
+
+#: ballot/models.py:49
+msgid "updated_at"
+msgstr ""
+
+#: ballot/models.py:55 ballot/models.py:76
+msgid "issue"
+msgstr ""
+
+#: ballot/models.py:56
+msgid "issues"
+msgstr ""
+
+#: ballot/models.py:73
+msgid "down"
+msgstr ""
+
+#: ballot/models.py:74
+msgid "up"
+msgstr ""
+
+#: ballot/models.py:77
+msgid "voter"
+msgstr ""
+
+#: ballot/models.py:78
+msgid "value"
+msgstr ""
+
+#: ballot/models.py:81
+msgid "vote"
+msgstr ""
+
+#: ballot/models.py:82
+msgid "votes"
+msgstr ""

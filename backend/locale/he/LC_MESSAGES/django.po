@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Copyright (C) 2023.
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Oriya Alperin <Oriya2011@gmail.com>, 2023.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-04 16:39+0300\n"
+"POT-Creation-Date: 2023-10-05 22:24+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,10 +19,110 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % "
 "1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;\n"
 
-#: backend/settings.py:114
+#: backend/settings.py:115
 msgid "English"
 msgstr "אנגלית"
 
-#: backend/settings.py:115
+#: backend/settings.py:116
 msgid "Hebrew"
 msgstr "עברית"
+
+#: ballot/managers.py:15
+msgid "The Email must be set"
+msgstr "כתובת אימייל נדרשת"
+
+#: ballot/managers.py:31
+msgid "Superuser must have is_staff=True."
+msgstr ""
+
+#: ballot/managers.py:33
+msgid "Superuser must have is_superuser=True."
+msgstr ""
+
+#: ballot/models.py:10
+msgid "email address"
+msgstr "כתובת אימייל"
+
+#: ballot/models.py:11 ballot/models.py:45
+msgid "title"
+msgstr "טייטל"
+
+#: ballot/models.py:12
+msgid "avatar"
+msgstr "תמונת פרופיל"
+
+#: ballot/models.py:30
+msgid "member"
+msgstr "חבר/ה"
+
+#: ballot/models.py:31
+msgid "members"
+msgstr "חברים"
+
+#: ballot/models.py:39
+msgid "open"
+msgstr "פתוח"
+
+#: ballot/models.py:40
+msgid "closed"
+msgstr "נסגר"
+
+#: ballot/models.py:41
+msgid "accepted"
+msgstr "התקבל"
+
+#: ballot/models.py:42
+msgid "handled"
+msgstr "טופל"
+
+#: ballot/models.py:44
+msgid "created_by"
+msgstr "נוצר על ידי"
+
+#: ballot/models.py:46
+msgid "description"
+msgstr "תיאור"
+
+#: ballot/models.py:47
+msgid "status"
+msgstr "ססטוס"
+
+#: ballot/models.py:48
+msgid "created_at"
+msgstr "נוצר ב:"
+
+#: ballot/models.py:49
+msgid "updated_at"
+msgstr "התעדכן ב:"
+
+#: ballot/models.py:55 ballot/models.py:76
+msgid "issue"
+msgstr "נושא"
+
+#: ballot/models.py:56
+msgid "issues"
+msgstr "נושאים"
+
+#: ballot/models.py:73
+msgid "down"
+msgstr "נגד"
+
+#: ballot/models.py:74
+msgid "up"
+msgstr "בעד"
+
+#: ballot/models.py:77
+msgid "voter"
+msgstr "מצביע/ה"
+
+#: ballot/models.py:78
+msgid "value"
+msgstr "ערך"
+
+#: ballot/models.py:81
+msgid "vote"
+msgstr "מצביע/ה"
+
+#: ballot/models.py:82
+msgid "votes"
+msgstr "הצבעות"

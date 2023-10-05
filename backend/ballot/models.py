@@ -17,7 +17,7 @@ class CustomUser(AbstractUser):
     objects = CustomUserManager()
     
     def __str__(self) -> str:
-        return self.email
+        return self.get_full_name()
     
     def get_full_name(self) -> str:
         return f'{self.first_name} {self.last_name}'
@@ -26,6 +26,10 @@ class CustomUser(AbstractUser):
 class Member(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     
+    class Meta:
+        verbose_name = _('member')
+        verbose_name_plural = _('members')
+
     def __str__(self) -> str:
         return str(self.user)
     
@@ -47,6 +51,10 @@ class Issue(models.Model):
             models.Index(fields=["created_by"]),
         ]
     
+    class Meta:
+        verbose_name = _('issue')
+        verbose_name_plural = _('issues')
+    
     def __str__(self) -> str:
         return f'{self.title}'
     
@@ -62,14 +70,17 @@ class Issue(models.Model):
 
 class Vote(models.Model):
     class Value(models.IntegerChoices): # should change in the future
-        DOWN = -1
-        UP = 0
+        DOWN = -1, _('down')
+        UP = 0, _('up')
 
     issue = models.ForeignKey(Issue,on_delete=models.CASCADE, verbose_name=_("issue"))
     voter = models.ForeignKey(Member,on_delete=models.CASCADE, verbose_name=_("voter"))
     value = models.IntegerField(choices=Value.choices,default=Value.UP, verbose_name=_("value")) # scale
     
     class Meta:
+        verbose_name = _('vote')
+        verbose_name_plural = _('votes')
+
         constraints = [
             models.UniqueConstraint(
                 fields=['issue', 'voter'],
