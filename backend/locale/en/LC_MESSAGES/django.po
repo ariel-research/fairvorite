@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-05 22:23+0300\n"
+"POT-Creation-Date: 2023-10-15 14:13+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: backend/settings.py:115
+#: backend/settings.py:123
 msgid "English"
 msgstr "English"
 
-#: backend/settings.py:116
+#: backend/settings.py:124
 msgid "Hebrew"
 msgstr "Hebrew"
 
@@ -102,6 +102,10 @@ msgstr ""
 msgid "issues"
 msgstr ""
 
+#: ballot/models.py:62
+msgid "edited"
+msgstr ""
+
 #: ballot/models.py:73
 msgid "down"
 msgstr ""
@@ -124,4 +128,13 @@ msgstr ""
 
 #: ballot/models.py:82
 msgid "votes"
+msgstr ""
+
+#: ballot/models.py:92
+#, python-brace-format
+msgid "{voter} votes for {issue}"
+msgstr ""
+
+#: ballot/views.py:70
+msgid "vote_accpeted"
 msgstr ""
