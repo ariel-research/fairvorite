@@ -59,7 +59,7 @@ class Issue(models.Model):
         return f'{self.title}'
     
     def get_date(self):
-       return self.updated_at, 'edited' if self.updated_at > self.created_at else self.created_at, 'created'
+       return self.updated_at, {_('edited')} if self.updated_at > self.created_at else self.created_at, 'created'
     
     def get_creator(self):
         return self.created_by.get_full_name()
@@ -89,5 +89,6 @@ class Vote(models.Model):
         ]
     
     def __str__(self) -> str:
-        return f'{self.voter} votes for {self.issue}'
+        return _("{voter} votes for {issue}").format(voter=self.voter, issue=self.issue)
+
 
