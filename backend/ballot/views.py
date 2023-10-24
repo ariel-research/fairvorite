@@ -4,6 +4,7 @@ from .serializers import CustomUserSerializer,MemberSerializer,IssueSerializer,V
 from .forms import IssueForm
 from rest_framework.response import Response
 from rest_framework.decorators import action
+from rest_framework.permissions import AllowAny
 
 from django.utils.translation import gettext_lazy as _
 
@@ -21,6 +22,7 @@ class MemberView(viewsets.ModelViewSet):
 class IssueView(viewsets.ModelViewSet):
     queryset = Issue.objects.all()
     serializer_class = IssueSerializer
+    permission_classes = (AllowAny,)
 
     def value(self,request):
         """
