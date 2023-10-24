@@ -29,9 +29,13 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG") 
 
-ALLOWED_HOSTS = ['localhost','fairvorite.csariel.xyz', '104.248.16.54']
+ALLOWED_HOSTS = ['localhost','csariel.xyz','fairvorite.csariel.xyz', '104.248.16.54']
 
-
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3001",
+    "http://104.248.16.54:3001",
+    "http://csariel.xyz:3001",
+]
 # Application definition
 
 INSTALLED_APPS = [
@@ -41,13 +45,18 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
     'ballot',
     'rest_framework',
+    'celery',
+    #'kombu.transport.django',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -147,3 +156,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 AUTH_USER_MODEL = 'ballot.CustomUser'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+BROKER_URL = os.environ.get('RABBITMQ_URL', 'amqp://guest:guest@localhost:5672/')
